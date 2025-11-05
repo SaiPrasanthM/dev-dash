@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { RouterOutlet } from '@angular/router';
+import { GithubStatsComponent } from '../../features/github-stats/github-stats.component';
 
 @Component({
   selector: 'app-layout',
@@ -15,7 +16,8 @@ import { RouterOutlet } from '@angular/router';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule],
+    MatListModule,
+  GithubStatsComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })

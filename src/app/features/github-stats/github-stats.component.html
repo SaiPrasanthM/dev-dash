@@ -1,0 +1,23 @@
+<div
+  *ngIf="user$ | async as user; else loading"
+  class="card"
+  style="width: 18rem"
+>
+  <img [src]="user.avatar_url" class="card-img-top" />
+  <div class="card-body">
+    <h5 class="card-title">{{ user.name }}</h5>
+    <p class="card-text">{{ user.bio }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Followers: {{ user.followers }}</li>
+    <li class="list-group-item">Following: {{ user.following }}</li>
+    <li class="list-group-item">Public Repos: {{ user.public_repos }}</li>
+  </ul>
+  <div class="card-body">
+    <a [href]="user.html_url" target="_blank" class="card-link">View Profile</a>
+  </div>
+</div>
+
+<ng-template #loading>
+  <p>Loading GitHub data...</p>
+</ng-template>
