@@ -1,0 +1,25 @@
+// src/app/core/layout/layout.component.scss
+
+.sidenav-container {
+  // Make the container fill the entire viewport height
+  height: 100vh;
+}
+
+.sidenav {
+  // Use Bootstrap's shadow utility! (Example of mixing libraries)
+  width: 250px;
+  box-shadow: 3px 0 6px rgba(0, 0, 0, 0.24);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  // The router outlet content will grow to fill available space
+  flex-grow: 1;
+  
+  // Use Bootstrap's padding utilities!
+  padding: 1.5rem; // p-3 would be 1rem, p-4 is 1.5rem
+}
